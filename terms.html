@@ -1,11 +1,17 @@
 <!doctype html>
 <html lang="pt-BR" data-theme="ember">
 <head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
   <title>Termos de uso — Tatarugas</title>
   <meta name="description" content="Termos de uso do Tatarugas. Regras claras pra usar o app com tranquilidade."/>
   <meta name="theme-color" content="#1A120F"/>
+  <meta name="color-scheme" content="dark light"/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="apple-touch-icon" href="assets/favicon.svg"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -16,7 +22,11 @@
     (function(){
       try {
         var t = localStorage.getItem('tatarugas.theme');
-        if (t === 'manha' || t === 'ember') document.documentElement.setAttribute('data-theme', t);
+        if (t === 'manha' || t === 'ember') {
+          document.documentElement.setAttribute('data-theme', t);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', t === 'manha' ? '#FBF6EE' : '#1A120F');
+        }
       } catch(_){}
     })();
   </script>
@@ -26,11 +36,12 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a class="brand" href="index.html" aria-label="Tatarugas · ir para a home">
-        <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+        <svg class="brand-glyph" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="24" cy="32" r="18" stroke="currentColor" stroke-width="2.4"/>
+          <circle cx="40" cy="32" r="18" stroke="currentColor" stroke-width="2.4"/>
+          <circle cx="32" cy="32" r="3.2" fill="currentColor"/>
         </svg>
-        <span>Tatar<em>uga</em></span>
+        <span>Tatar<em>ugas</em></span>
       </a>
       <button class="theme-toggle" aria-label="Alternar tema entre ember e manhã">
         <span class="opt" data-theme="ember"  aria-pressed="true">ember</span>
@@ -45,22 +56,12 @@
       <a href="index.html" class="doc-back">‹ voltar pra home</a>
       <p class="kicker primary">Documento legal</p>
       <h1>Termos de <em class="editorial-it">uso</em></h1>
-      <p class="last-updated">Última atualização · 4 de maio de 2026</p>
+      <p class="last-updated">Última atualização · 29 de abril de 2026</p>
 
-      <p>Estes Termos regulam o uso do aplicativo e do site <strong>Tatarugas</strong>. Eles foram escritos pra ser legíveis. Quando você cria uma conta, baixa o app ou se inscreve na lista de espera, você aceita estes Termos. Se algo aqui não combinar com você, melhor não usar o serviço.</p>
+      <p>Estes Termos regulam o uso do aplicativo e do site <strong>Tatarugas</strong>. Quando você cria uma conta, baixa o app ou se inscreve na lista de espera, você aceita estes Termos.</p>
 
       <h2>1 · O que é o serviço</h2>
-      <p>Tatarugas é um aplicativo voltado a casais, com ferramentas pra reconexão emocional cotidiana. Hoje inclui:</p>
-      <ul>
-        <li><strong>Check-ins de humor</strong> e memórias compartilhadas do dia a dia.</li>
-        <li><strong>Conversa</strong> entre o casal, com a presença ocasional da Tuca.</li>
-        <li><strong>Pergunta do Dia</strong> — uma pergunta diária pros dois responderem.</li>
-        <li><strong>Tuca Cutuca</strong> — perguntas dissertativas profundas, geradas conforme o momento.</li>
-        <li><strong>Minha Jornada</strong> — módulos privados de autoconhecimento, com camadas que vão se abrindo.</li>
-        <li><strong>Meu Diário</strong> — espaço privado pra escrever sozinho, com possibilidade de compartilhar item por item se quiser.</li>
-        <li><strong>Tuca</strong> — uma presença baseada em <strong>inteligência artificial</strong> (modelo Claude da Anthropic) que organiza sugestões, devolve reflexões e medeia conversas. A Tuca não é uma pessoa, não é uma terapeuta e pode errar.</li>
-      </ul>
-      <p>O Tatarugas <em>não</em> é um serviço de saúde mental, não substitui terapia, não é serviço de aconselhamento profissional, e não fornece diagnósticos. Se você ou seu par estiver em crise, procure um profissional ou ligue pro CVV: 188.</p>
+      <p>Tatarugas é um aplicativo voltado a casais, com ferramentas de reconexão emocional cotidiana. <em>Não</em> é serviço de saúde mental, não substitui terapia. Em crise, ligue para o CVV: 188.</p>
 
       <h2>2 · Quem pode usar</h2>
       <ul>
@@ -70,96 +71,42 @@
       </ul>
 
       <h2>3 · Sua conta</h2>
-      <p>Você é responsável pela conta criada com seu email. Mantenha as credenciais em segredo. Se desconfiar de acesso indevido, escreva pra <a href="mailto:contato@tatarugas.com.br">contato@tatarugas.com.br</a>.</p>
-      <p>Cada pessoa tem sua própria conta. Mesmo dentro de um casal, cada um entra com seu próprio login — porque parte do app (como Minha Jornada) é privado <em>de cada um</em>.</p>
+      <p>Você é responsável pela conta criada com seu email. Cada pessoa tem sua própria conta — porque parte do app (como Minha Jornada) é privado <em>de cada um</em>.</p>
 
       <h2>4 · Conduta esperada</h2>
-      <p>Pra que o Tatarugas continue sendo um lugar tranquilo, você concorda em <em>não</em>:</p>
+      <p>Você concorda em <em>não</em>:</p>
       <ul>
         <li>Usar o app pra assediar, ameaçar, coagir ou intimidar outra pessoa.</li>
         <li>Forçar par a usar o app contra a vontade.</li>
-        <li>Tentar acessar dados de outros usuários, contornar mecanismos de segurança, ou sondar o sistema.</li>
-        <li>Fazer engenharia reversa, descompilar ou tentar extrair código-fonte do app.</li>
-        <li>Usar bots, scripts automatizados ou múltiplas contas com finalidade de manipular o serviço.</li>
-        <li>Tentar manipular a Tuca pra produzir conteúdo prejudicial, ofensivo, ilegal ou que escape do propósito do app.</li>
-        <li>Publicar conteúdo ilegal, que infrinja direitos de terceiros, ou que viole leis brasileiras — incluindo na Conversa com seu par.</li>
+        <li>Tentar acessar dados de outros usuários, contornar mecanismos de segurança.</li>
+        <li>Fazer engenharia reversa do app.</li>
+        <li>Usar bots ou scripts pra manipular o serviço.</li>
+        <li>Publicar conteúdo ilegal ou que viole leis brasileiras.</li>
       </ul>
 
       <h2>5 · Conteúdo do casal</h2>
-      <p>Tudo o que vocês escrevem, marcam, gravam ou guardam dentro do app é <em>de vocês</em>. Não reivindicamos propriedade. Você nos concede uma licença mínima e estritamente operacional — apenas pra hospedar, sincronizar entre dispositivos, fazer backup, exibir de volta pra vocês e processar via IA quando você acionar a Tuca. Essa licença termina quando você apaga a conta.</p>
-      <p>O Meu Diário é privado por padrão. Quando você decide compartilhar parte dele:</p>
-      <ul>
-        <li><strong>Pra Conversa do casal:</strong> o trecho escolhido vira mensagem na Conversa e o par passa a poder ler. Você pode apagar essa mensagem depois — quando apaga, ela some pra ambos sem deixar marcador "mensagem apagada".</li>
-        <li><strong>Pra Instagram (ou outro destino fora do app):</strong> geramos uma imagem anônima e abrimos a tela de compartilhamento do seu celular. A partir desse momento, o conteúdo deixa nossos sistemas e segue as regras de quem você escolheu enviar.</li>
-      </ul>
+      <p>Tudo o que vocês escrevem é <em>de vocês</em>. Não reivindicamos propriedade. Você nos concede uma licença mínima e operacional — apenas pra hospedar, sincronizar, fazer backup e exibir de volta. Termina quando você apaga a conta.</p>
 
       <h2>6 · Suspensão e encerramento</h2>
-      <p>Podemos suspender ou encerrar o acesso à sua conta se houver violação séria destes Termos — especialmente quando envolve segurança de outras pessoas. Sempre que possível, avisamos antes e damos chance de exportar seus dados.</p>
-      <p>Você pode encerrar sua conta a qualquer momento, em <em>Ajustes › Conta › Excluir conta</em>. Os dados são removidos conforme descrito na Política de Privacidade.</p>
+      <p>Podemos suspender em caso de violação séria. Você pode encerrar a qualquer momento em <em>Ajustes › Conta › Excluir conta</em>.</p>
 
-      <h2>7 · Premium e pagamentos</h2>
-      <p>O Tatarugas tem uma camada gratuita e uma camada Premium opcional.</p>
+      <h2>7 · Pagamentos</h2>
+      <p>Hoje em beta fechado, gratuito. Quando introduzirmos planos pagos, esta seção será atualizada com aviso prévio.</p>
 
-      <h3>O que é grátis</h3>
-      <p>Você pode usar o app sem assinar. Os dois primeiros módulos da Minha Jornada, a Pergunta do Dia, a Tuca Cutuca uma vez por semana, a Conversa, as Memórias e o Meu Diário ficam disponíveis pra todo mundo.</p>
+      <h2>8 · Propriedade intelectual</h2>
+      <p>O nome <em>Tatarugas</em>, a personagem <em>Tuca</em>, logotipos, interface e código-fonte são de propriedade do time Tatarugas.</p>
 
-      <h3>O que é Premium</h3>
-      <ul>
-        <li>Tuca Cutuca todos os dias.</li>
-        <li>Minha Jornada completa, com todos os módulos.</li>
-        <li>Ponte pra conversa difícil — quando você precisa de mediação real da Tuca.</li>
-        <li>Perfil semanal da Tuca, que aprende com vocês ao longo do tempo.</li>
-      </ul>
+      <h2>9 · Limitação de responsabilidade</h2>
+      <p>O Tatarugas é fornecido <em>"como está"</em>. Direitos do consumidor irrenunciáveis seguem valendo.</p>
 
-      <h3>Preço atual de lançamento</h3>
-      <ul>
-        <li><strong>Mensal:</strong> R$ 39,90 por mês.</li>
-        <li><strong>Anual:</strong> R$ 399,90 por ano (~16% mais barato que pagar mês a mês).</li>
-      </ul>
-      <p>Esse é o preço de lançamento. Pode mudar conforme o app evolui — quando mudarmos, avisamos com antecedência conforme as regras das lojas e da legislação. Mudanças que afetem o que você já contratou seguem o que a Apple ou Google permitem (geralmente, a renovação seguinte é com o novo preço, depois de aviso prévio de 30 dias).</p>
+      <h2>10 · Mudanças nestes Termos</h2>
+      <p>Quando alterarmos algo material, avisamos com pelo menos 15 dias de antecedência.</p>
 
-      <h3>Como cobramos</h3>
-      <ul>
-        <li><strong>A cobrança é feita pela Apple Store ou Google Play</strong>, não diretamente por nós. Sua relação financeira é com a loja.</li>
-        <li><strong>Renovação automática:</strong> a assinatura renova ao final de cada ciclo até você cancelar.</li>
-        <li><strong>Cancelamento:</strong> direto na sua conta da loja. No iOS: <em>Ajustes › Apple ID › Assinaturas</em>. No Android: <em>Play Store › Assinaturas</em>. O acesso premium continua até o fim do ciclo já pago.</li>
-        <li><strong>Sem permanência mínima.</strong> Cancela quando quiser.</li>
-        <li><strong>Reembolsos</strong> seguem as políticas da Apple e do Google. Pra solicitar, fale direto com a loja onde você comprou.</li>
-        <li><strong>Cupons e códigos promocionais</strong> são gerados pela gente e resgatados dentro do app. Cada código identifica de qual canal você veio, sem ligar a sua conta a propaganda.</li>
-      </ul>
+      <h2>11 · Lei aplicável e foro</h2>
+      <p>Leis brasileiras. Foro da comarca onde você reside, ressalvada legislação cogente.</p>
 
-      <h3>Direito de arrependimento (CDC)</h3>
-      <p>Compras digitais a distância podem ter direito de arrependimento de 7 dias conforme o Código de Defesa do Consumidor. Pra exercer, fale direto com a loja onde comprou (Apple ou Google) — eles processam o reembolso. Esse direito pode ser limitado quando você já consumiu o serviço.</p>
-
-      <h2>8 · A Tuca e a IA</h2>
-      <p>A Tuca é uma <strong>presença baseada em inteligência artificial</strong>, construída sobre o modelo Claude da Anthropic. Quando você escreve uma resposta na Tuca Cutuca, conversa com ela, ou recebe seu perfil semanal Premium — o conteúdo necessário é enviado pra API da Anthropic em tempo real.</p>
-      <p>Algumas verdades que valem dizer:</p>
-      <ul>
-        <li><strong>A Anthropic não usa o seu conteúdo pra treinar modelos.</strong> Nossa relação com eles é via API empresarial, com cláusula explícita de não-treino.</li>
-        <li><strong>O conteúdo não fica armazenado pela Anthropic depois da resposta.</strong> Passa pelo modelo, gera a resposta, e nada fica do lado deles.</li>
-        <li><strong>A Tuca pode errar.</strong> Pode dizer algo desajeitado, pode não responder bem, pode interpretar errado. Não substitui terapia, não dá diagnóstico, não é especialista. Use o que ela diz como ponto de reflexão, não como verdade.</li>
-        <li><strong>A Tuca não te conhece sozinha.</strong> Ela usa o que você escreveu pra te entender. Se você desligou o aprendizado em <em>Perfil › Privacidade</em>, ela trata cada conversa como nova.</li>
-      </ul>
-
-      <h2>9 · Propriedade intelectual</h2>
-      <p>O nome <em>Tatarugas</em>, a personagem <em>Tuca</em>, os logotipos, a interface, os textos do app e do site, e o código-fonte são de propriedade do time Tatarugas, protegidos por lei. Você pode usar o serviço, não copiá-lo.</p>
-
-      <h2>10 · Limitação de responsabilidade</h2>
-      <p>O Tatarugas é fornecido <em>"como está"</em>, com esforço sincero pra ser confiável e útil. Não garantimos que estará sempre disponível, livre de erros, ou que vai resolver questões emocionais ou conjugais. Não somos responsáveis por danos indiretos, lucros cessantes ou prejuízos decorrentes de decisões tomadas com base em conteúdo do app ou em sugestões da Tuca.</p>
-      <p>Os limites desta cláusula respeitam o que a lei brasileira permite — direitos do consumidor que sejam irrenunciáveis seguem valendo.</p>
-
-      <h2>11 · Mudanças nestes Termos</h2>
-      <p>Quando alterarmos algo material, avisamos com pelo menos 15 dias de antecedência por email e dentro do app. Continuar usando o serviço depois dessa data significa aceitar a nova versão. Se a mudança for desfavorável a você (ex.: aumento de preço, redução de benefícios), você pode encerrar a conta sem custo dentro do prazo de aviso.</p>
-
-      <h2>12 · Lei aplicável e foro</h2>
-      <p>Estes Termos se regem pelas leis brasileiras. Eventuais litígios serão resolvidos preferencialmente por diálogo direto. Não havendo acordo, fica eleito o foro da comarca onde você reside, ressalvada legislação cogente que indique outro.</p>
-
-      <h2>13 · Contato</h2>
-      <p>Qualquer dúvida sobre estes Termos:</p>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:contato@tatarugas.com.br">contato@tatarugas.com.br</a></li>
-        <li><strong>Destinatário:</strong> Guilherme C.</li>
-      </ul>
+      <h2>12 · Contato</h2>
+      <p><a href="/cdn-cgi/l/email-protection#8eede1e0faeffae1cefaeffaeffcfbe9effda0ede1e3a0ecfc"><span class="__cf_email__" data-cfemail="d2b1bdbca6b3a6bd92a6b3a6b3a0a7b5b3a1fcb1bdbffcb0a0">[email&#160;protected]</span></a>.</p>
 
       <p style="margin-top: 56px; color: var(--text-secondary); font-style: italic; font-family: 'Fraunces', serif;">— time Tatarugas, Brasil</p>
     </div>
@@ -181,6 +128,6 @@
     </div>
   </footer>
 
-  <script src="site.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="site.js"></script>
 </body>
 </html>

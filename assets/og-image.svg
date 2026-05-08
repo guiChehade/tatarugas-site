@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#33211B"></stop>
+      <stop offset="100%" stop-color="#1A120F"></stop>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F2B07B" stop-opacity="0.22"></stop>
+      <stop offset="100%" stop-color="#F2B07B" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"></rect>
+  <circle cx="980" cy="315" r="260" fill="url(#halo)"></circle>
+  <g stroke="#D86C4A" stroke-width="2" fill="none" opacity="0.85">
+    <circle cx="940" cy="315" r="120"></circle>
+    <circle cx="1020" cy="315" r="120"></circle>
+  </g>
+  <circle cx="980" cy="315" r="6" fill="#D86C4A"></circle>
+  <text x="100" y="240" font-family="Fraunces, Georgia, serif" font-size="84" font-weight="300" fill="#FFF4EE" letter-spacing="-2">Um lugar</text>
+  <text x="100" y="338" font-family="Fraunces, Georgia, serif" font-size="84" font-weight="300" fill="#FFF4EE" letter-spacing="-2">só de <tspan font-style="italic" fill="#D86C4A">vocês dois.</tspan></text>
+  <text x="100" y="430" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="28" fill="#C4A08E">Calmaria como princípio. Aconchego como tom.</text>
+  <text x="100" y="540" font-family="JetBrains Mono, monospace" font-size="18" fill="#D86C4A" letter-spacing="3">TATARUGAS · BETA FECHADO</text>
+</svg>

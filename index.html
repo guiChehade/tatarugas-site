@@ -1,65 +1,90 @@
 <!doctype html>
 <html lang="pt-BR" data-theme="ember">
 <head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
   <title>Tatarugas — Um lugar só de vocês dois</title>
-  <meta name="description" content="Tatarugas é um espaço privado do casal para conversar melhor, guardar memória, mandar carinho e se reconectar com calma, todos os dias."/>
+  <meta name="description" content="O Tatarugas é o lugar do casal pra se reconectar, conversar melhor, guardar memória e cuidar da relação com mais intenção. Privado, calmo, todos os dias."/>
   <meta name="theme-color" content="#1A120F"/>
+  <meta name="color-scheme" content="dark light"/>
+
+  <!-- Open Graph + Twitter -->
+  <meta property="og:title" content="Tatarugas — Um lugar só de vocês dois"/>
+  <meta property="og:description" content="O romance do cotidiano — não o dos anúncios. Privado, calmo, todos os dias."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/og-image.svg"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Tatarugas — Um lugar só de vocês dois"/>
+  <meta name="twitter:description" content="O romance do cotidiano — não o dos anúncios."/>
+  <meta name="twitter:image" content="assets/og-image.svg"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="apple-touch-icon" href="assets/favicon.svg"/>
+  <link rel="mask-icon" href="assets/favicon.svg" color="#D86C4A"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="site.css"/>
 
+  <!-- Bootstrap síncrono de tema, antes do paint, sem FOUC -->
   <script>
-    (function () {
+    (function(){
       try {
-        var theme = localStorage.getItem("tatarugas.theme");
-        if (theme === "manha" || theme === "ember") {
-          document.documentElement.setAttribute("data-theme", theme);
+        var t = localStorage.getItem('tatarugas.theme');
+        if (t === 'manha' || t === 'ember') {
+          document.documentElement.setAttribute('data-theme', t);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', t === 'manha' ? '#FBF6EE' : '#1A120F');
         }
-      } catch (_) {}
+      } catch(_){}
     })();
   </script>
 </head>
 <body>
+
   <header class="site-header" data-screen-label="header">
     <div class="site-header-inner">
       <a class="brand" href="/" aria-label="Tatarugas · ir para a home">
-        <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+        <svg class="brand-glyph" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="24" cy="32" r="18" stroke="currentColor" stroke-width="2.4"/>
+          <circle cx="40" cy="32" r="18" stroke="currentColor" stroke-width="2.4"/>
+          <circle cx="32" cy="32" r="3.2" fill="currentColor"/>
         </svg>
         <span>Tatar<em>ugas</em></span>
       </a>
+      <!-- logo size aumentado via .brand .brand-glyph no CSS -->
       <button class="theme-toggle" aria-label="Alternar tema entre ember e manhã">
-        <span class="opt" data-theme="ember" aria-pressed="true">ember</span>
+        <span class="opt" data-theme="ember"  aria-pressed="true">ember</span>
         <span class="sep" aria-hidden="true">·</span>
-        <span class="opt" data-theme="manha" aria-pressed="false">manhã</span>
+        <span class="opt" data-theme="manha"  aria-pressed="false">manhã</span>
       </button>
     </div>
   </header>
 
   <main>
+    <!-- ── 1 · HERO ────────────────────────────────── -->
     <section class="hero" data-screen-label="hero">
-      <svg class="hero-glyph-bg" viewBox="0 0 480 480" fill="none" aria-hidden="true">
-        <circle cx="240" cy="240" r="200" stroke="currentColor" stroke-width="1.2"/>
-        <circle cx="240" cy="240" r="140" stroke="currentColor" stroke-width="1.2"/>
-        <circle cx="240" cy="240" r="80" stroke="currentColor" stroke-width="1.2"/>
-        <circle cx="240" cy="240" r="20" fill="currentColor"/>
+      <svg class="hero-rings" viewBox="0 0 480 480" fill="none" aria-hidden="true">
+        <circle cx="240" cy="240" r="220" stroke="currentColor" stroke-width="1"/>
+        <circle cx="240" cy="240" r="160" stroke="currentColor" stroke-width="1"/>
+        <circle cx="240" cy="240" r="100" stroke="currentColor" stroke-width="1"/>
+        <circle cx="240" cy="240" r="40"  stroke="currentColor" stroke-width="1"/>
       </svg>
       <div class="wrap">
         <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="kicker">Tatarugas · Beta fechado</p>
-            <h1 class="hero-title">Um lugar só de <em>vocês dois.</em></h1>
+          <div class="reveal hero-copy">
+            <p class="kicker">Tatarugas</p>
+            <h1 class="hero-title">
+              Um lugar<br/>só de <em>vocês dois.</em>
+            </h1>
             <p class="hero-sub">
-              Um espaço privado para o casal conversar melhor, guardar memória, mandar carinho e
-              continuar perto mesmo nos dias comuns.
-            </p>
-            <p class="hero-proof">
-              Privado por padrão. Calmo de propósito. Feito para durar mais que o impulso do dia.
+              Calmaria como princípio. Aconchego como tom. O romance do cotidiano — não o dos anúncios.
             </p>
             <div class="hero-actions">
               <a href="#waitlist" class="btn btn-primary">
@@ -68,149 +93,121 @@
                   <path d="M1 5h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
-              <a href="#manifesto" class="link-soft">ou: entender melhor o que é o Tatarugas ↓</a>
+              <a href="#manifesto" class="link-soft">ou: leia o que é o Tatarugas ↓</a>
             </div>
           </div>
-
-          <div class="hero-showcase" aria-label="Prévia do aplicativo Tatarugas">
-            <figure class="phone-shell phone-shell-back">
-              <img src="media/nos-screen.png" alt="Tela Íntimo do aplicativo Tatarugas"/>
-            </figure>
-            <figure class="phone-shell phone-shell-front">
-              <img src="media/home-screen.png" alt="Tela principal do aplicativo Tatarugas"/>
-            </figure>
-            <figure class="phone-chip">
-              <img src="media/carinho-screen.png" alt="Tela de carinhos do aplicativo Tatarugas"/>
-            </figure>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- ── 2 · MANIFESTO ───────────────────────────── -->
     <section class="section" id="manifesto" data-screen-label="manifesto">
-      <div class="wrap-tight">
+      <div class="wrap-tight reveal">
         <p class="kicker primary">O que é o Tatarugas</p>
         <div class="manifesto-text dropcap">
-          <p>O Tatarugas é um espaço privado do casal. Não é rede social, não é agenda compartilhada, não é mais um app pedindo atenção o tempo todo.</p>
-          <p>É um lugar para ficar perto com mais intenção: responder juntos, lembrar do que importa, cuidar da conversa antes que ela desgaste, e deixar pequenos sinais de afeto no meio da rotina.</p>
-          <p>A Tuca mora aqui dentro. Ela ajuda quando vocês chamam, aprende o ritmo do casal e organiza o que importa sem tomar o lugar de vocês.</p>
+          <p>O Tatarugas é um espaço privado do casal. Não é rede social, não é dashboard, não é mais uma lista de tarefas pra cumprir.</p>
+          <p>É um canto pequeno e quieto pra estar perto todos os dias — sem pressa, sem cobrança, sem virar mais um app pedindo atenção.</p>
+          <p>A <em>Tuca</em>, nossa personagem, mora aqui dentro: ajuda quando a conversa trava, sugere gestos, guarda o que importa pra vocês. Mas só aparece quando vocês chamam.</p>
         </div>
       </div>
     </section>
 
+    <!-- ── 3 · O QUE CABE AQUI DENTRO ─────────────── -->
     <section class="section" id="cabe" data-screen-label="cabe">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <p class="kicker primary">O que cabe aqui dentro</p>
-          <h2>Coisas pequenas que ajudam a relação a <em>continuar viva.</em></h2>
-          <p class="lede">Não são features soltas. São jeitos diferentes de se aproximar, lembrar, falar e cuidar.</p>
+          <h2>O que cabe <em>aqui dentro.</em></h2>
+          <p class="lede">Não são features de um app. São jeitos de estar perto. Um por dia, sem pressa.</p>
         </div>
 
-        <article class="cabe-feature cabe-feature-tuca">
-          <div class="tuca-organism-wrapper" aria-hidden="true">
-            <canvas class="tuca-canvas" data-tuca-organism data-state="listening" width="280" height="280"></canvas>
+        <article class="cabe-feature reveal">
+          <div class="tuca-organism" aria-hidden="true">
+            <canvas data-tuca data-size="260" data-density="1"></canvas>
           </div>
           <div class="cabe-feature-text">
             <p class="kicker tuca">A Tuca</p>
-            <h3>Uma presença calma que <em>aprende com vocês.</em></h3>
-            <p>A Tuca ajuda a puxar conversa, sugere gestos pequenos, organiza memórias e acompanha o ritmo do casal ao longo do tempo.</p>
-            <p>Ela não aparece o tempo inteiro. Entra quando faz sentido e sai do caminho quando o momento é só de vocês.</p>
+            <h3>Uma presença pensante <em>que aprende com vocês — e guia sem dirigir.</em></h3>
+            <p>A Tuca aprende com vocês porque cada casal tem seu próprio ritmo. O que conforta um pode irritar outro, o que repara hoje pode ser inútil amanhã. Ela presta atenção ao longo do tempo pra entender como guiar de um jeito que faça sentido pra <em>vocês dois</em>, não pro casal médio.</p>
+            <p>O papel dela é <em>guiar</em> — sem virar terapia, sem virar coach, sem lista de tarefas. Sugere o gesto certo na hora certa, ajuda quando a conversa trava, e guarda o que importa pra vocês como contexto pras próximas conversas. Mas só aparece quando chamam. O resto do tempo, observa em silêncio.</p>
           </div>
         </article>
 
-        <div class="carousel" data-carousel>
-          <button class="carousel-btn carousel-prev" type="button" aria-label="Cards anteriores" data-carousel-prev>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="cabe-grid cabe-grid-tuca">
+          <article class="cabe-card cabe-card-tuca reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M3 22h22M3 22c4-12 18-12 22 0M8 22v-4M20 22v-4M14 14V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
             </svg>
-          </button>
-          <button class="carousel-btn carousel-next" type="button" aria-label="Próximos cards" data-carousel-next>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <p class="kicker tuca">Ponte</p>
+            <h4>Conversar melhor <em>quando algo travar.</em></h4>
+            <p>Espaço onde vocês chamam a Tuca pra mediar uma conversa difícil. Cada um responde no seu tempo. A síntese vem quando fizer sentido, não no impulso.</p>
+          </article>
+          <article class="cabe-card cabe-card-tuca reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 4v8M14 24v-4M5 14h8M23 14h-4M8 8l4 4M20 20l-4-4M8 20l4-4M20 8l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2" fill="currentColor"/>
             </svg>
-          </button>
+            <p class="kicker tuca">Decidir juntos</p>
+            <h4>Quando a escolha é dos dois, <em>nenhum decide sozinho.</em></h4>
+            <p>De viagem a quem leva o cachorro pro vet — a Tuca organiza prós, contras e prioridades de cada um, e guarda a decisão final como acordo do casal.</p>
+          </article>
+          <article class="cabe-card cabe-card-tuca reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M14 9v5l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <p class="kicker tuca">Tuca cutuca</p>
+            <h4>Uma pergunta <em>só pra você.</em></h4>
+            <p>De tempos em tempos a Tuca te cutuca com uma pergunta individual. Fica no seu diário, ajuda a pensar antes da conversa precisar acontecer.</p>
+          </article>
+        </div>
 
-          <div class="carousel-viewport">
-            <div class="carousel-track" data-carousel-track>
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <path d="M14 4v3M14 21v3M4 14h3M21 14h3M7.5 7.5l2 2M18.5 18.5l-2-2M7.5 20.5l2-2M18.5 9.5l-2 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                  <circle cx="14" cy="14" r="4.5" stroke="currentColor" stroke-width="1.4"/>
-                </svg>
-                <p class="kicker">Pergunta do dia</p>
-                <h4>Uma pergunta pros dois, <em>sem pressa.</em></h4>
-                <p>Vocês recebem a mesma pergunta e só veem a resposta do outro quando ambos terminam. É mais encontro do que feed.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <path d="M3 22h22M3 22c4-12 18-12 22 0M8 22v-4M20 22v-4M14 14V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                </svg>
-                <p class="kicker">Ponte</p>
-                <h4>Ajuda quando uma conversa <em>fica difícil.</em></h4>
-                <p>Vocês chamam a Tuca para mediar, cada um responde no seu tempo, e a síntese vem para clarear em vez de inflamar.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <circle cx="14" cy="14" r="9" stroke="currentColor" stroke-width="1.4"/>
-                  <path d="M14 9v5l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                </svg>
-                <p class="kicker">Tuca Cutuca</p>
-                <h4>Uma pergunta só pra você, <em>na hora certa.</em></h4>
-                <p>Pequenos convites individuais para pensar melhor antes da conversa precisar acontecer.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <rect x="4" y="6" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.4"/>
-                  <path d="M4 12h20M9 4v4M19 4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                  <circle cx="9" cy="17" r="1.4" fill="currentColor"/>
-                  <circle cx="14" cy="17" r="1.4" fill="currentColor"/>
-                  <circle cx="19" cy="17" r="1.4" fill="currentColor"/>
-                </svg>
-                <p class="kicker">Memórias e marcos</p>
-                <h4>Uma linha do tempo do que <em>vale guardar.</em></h4>
-                <p>Momentos, cápsulas e datas importantes para a história do casal continuar acessível, e não perdida no rolo da câmera.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <path d="M4 14h6l3-9 4 18 3-12 4 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p class="kicker">Humor</p>
-                <h4>Pequenos sinais para entender <em>como vocês estão.</em></h4>
-                <p>Sem nota, sem ranking e sem performance. Só pistas simples para ler melhor a fase do relacionamento.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <path d="M14 24c-9-5-10-12-6-15s7 0 6 4c-1-4 2-7 6-4s3 10-6 15z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-                </svg>
-                <p class="kicker">Carinho</p>
-                <h4>Gestos pequenos que chegam <em>fora de hora.</em></h4>
-                <p>Um bilhete, um som, um lembrete bobo ou um afeto rápido. Não precisa motivo grande para sinalizar presença.</p>
-              </article>
-
-              <article class="cabe-card">
-                <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                  <path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M16 12c1-2-1-4-3-4s-4 2-4 5 3 5 7 5 7-3 7-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                </svg>
-                <p class="kicker">Minha Jornada</p>
-                <h4>Espaço individual para se entender <em>melhor no amor.</em></h4>
-                <p>Módulos privados para perceber padrões, nomear sentimentos e chegar na relação com mais clareza.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="carousel-dots" data-carousel-dots aria-hidden="true"></div>
+        <div class="cabe-grid">
+          <article class="cabe-card reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M4 14h6l3-9 4 18 3-12 4 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="kicker">Marcar como vocês estão</p>
+            <h4>Pequenos check-ins de humor que viram <em>leitura íntima</em> do casal.</h4>
+            <p>Sem nota, sem ranking. Só um sinal pequeno de como o dia está pousando em cada um.</p>
+          </article>
+          <article class="cabe-card reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="4" y="6" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M4 12h20M9 4v4M19 4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <circle cx="9" cy="17" r="1.4" fill="currentColor"/>
+              <circle cx="14" cy="17" r="1.4" fill="currentColor"/>
+              <circle cx="19" cy="17" r="1.4" fill="currentColor"/>
+            </svg>
+            <p class="kicker">Memórias e marcos</p>
+            <h4>Linha do tempo, cápsulas e <em>calendário</em> do que importa pra vocês.</h4>
+            <p>Momentos que ficam, cápsulas pra abrir mais tarde, e datas marcadas — pra nada importante passar batido.</p>
+          </article>
+          <article class="cabe-card reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 24c-9-5-10-12-6-15s7 0 6 4c-1-4 2-7 6-4s3 10-6 15z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+            <p class="kicker">Carinho sem motivo</p>
+            <h4>Gestos pequenos que chegam ao outro <em>fora de hora</em> — porque sim.</h4>
+            <p>Um bilhete, um som, um sinal qualquer. Não precisa ocasião pra mandar.</p>
+          </article>
+          <article class="cabe-card reveal">
+            <svg class="glyph-sm" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="2" fill="currentColor"/>
+              <path d="M16 12c1-2-1-4-3-4s-4 2-4 5 3 5 7 5 7-3 7-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <p class="kicker">Minha jornada</p>
+            <h4>Se conhecer mais <em>ao longo do tempo.</em></h4>
+            <p>Módulos curtos privados pra entender quem você é no amor — no seu tempo, sem rótulo.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- ── 4 · PRIVACIDADE ────────────────────────── -->
     <section class="section" id="privacidade" data-screen-label="privacidade">
       <div class="wrap">
-        <div class="privacy-block">
+        <div class="privacy-block reveal">
           <span class="privacy-seal" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
               <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/>
@@ -220,10 +217,10 @@
           </span>
           <div>
             <p class="kicker primary">Privacidade</p>
-            <h2>O que vocês escrevem fica <em>aqui dentro.</em></h2>
+            <h2>Os dados de vocês ficam <em>só entre vocês.</em></h2>
             <div class="privacy-body">
-              <p>A equipe não lê as conversas do casal. A Tuca pode ter o aprendizado desligado a qualquer momento. E a conta pode ser apagada direto no app.</p>
-              <p>Privacidade não entra aqui como adorno. Ela define o produto desde a base.</p>
+              <p>A equipe não tem acesso ao que vocês escrevem ou marcam. Vocês podem desligar o aprendizado da Tuca a qualquer momento. Você pode apagar a conta — e tudo vai junto.</p>
+              <p>Não é discurso bonito. É como o app foi construído desde o primeiro dia.</p>
             </div>
             <div class="privacy-links">
               <a class="link-soft" href="privacy.html">Política de Privacidade</a>
@@ -234,32 +231,27 @@
       </div>
     </section>
 
+    <!-- ── 5 · QUEM FEZ ───────────────────────────── -->
     <section class="section" id="quem" data-screen-label="quem">
       <div class="wrap-tight">
-        <div class="makers">
+        <div class="makers reveal">
           <p class="kicker primary">Quem fez</p>
-          <h2>Feito devagar por quem acredita que intimidade também merece <em>bom software.</em></h2>
-          <p>O Tatarugas está sendo construído no Brasil, com calma e sem pressa de parecer maior do que é. A proposta é simples: fazer um app que ajude relações reais em vez de disputar atenção com elas.</p>
+          <h2>Feito por gente que se importa com o que acontece <em>quando ninguém está olhando.</em></h2>
+          <p>Tatarugas é um produto pequeno, devagar, e teimosamente humano. Sem investidor com pressa, sem métrica de vaidade, sem hype. A gente acredita que casais merecem um lugar tranquilo no celular — e está construindo esse lugar com calma.</p>
         </div>
       </div>
     </section>
 
+    <!-- ── 6 · WAITLIST ───────────────────────────── -->
     <section class="section" id="waitlist" data-screen-label="waitlist">
       <div class="wrap">
-        <div class="waitlist">
+        <div class="waitlist reveal">
           <p class="kicker primary">Estamos começando</p>
-          <h2>Hoje, poucos casais estão testando. <em>Logo abrimos mais vagas.</em></h2>
-          <p class="lede">Se quiser entrar quando abrir, deixa seu email. A gente avisa com calma, e você decide depois se quer entrar.</p>
-
-          <form class="waitlist-form" action="https://formsubmit.co/contato@tatarugas.com.br" method="POST">
-            <input type="hidden" name="_subject" value="Tatarugas · novo email na lista de espera"/>
-            <input type="hidden" name="_template" value="table"/>
-            <input type="hidden" name="_captcha" value="false"/>
-            <input type="hidden" name="_next" value="https://tatarugas.com.br/?subscribed=1#waitlist"/>
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
-
-            <label for="email" class="sr-only">Seu email</label>
-            <input id="email" type="email" name="email" placeholder="seu@email.com" required autocomplete="email"/>
+          <h2>Hoje, só 3 casais testam.<br/><em>Em breve, abrimos pra mais.</em></h2>
+          <p class="lede">Quer ser um dos próximos? Deixa seu email — a gente avisa quando abrir, e você ainda decide se quer entrar.</p>
+          <form class="waitlist-form" novalidate>
+            <label for="email" style="position:absolute;left:-9999px">Seu email</label>
+            <input id="email" type="email" name="email" placeholder="seu@email.com" required autocomplete="email" inputmode="email"/>
             <button type="submit" class="btn btn-primary">
               Quero entrar
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
@@ -267,7 +259,7 @@
               </svg>
             </button>
           </form>
-          <p class="waitlist-fineprint">Sem spam. Só um aviso quando fizer sentido.</p>
+          <p class="waitlist-fineprint">Sem spam. Você pode sair quando quiser.</p>
           <p class="waitlist-success" role="status" aria-live="polite"></p>
         </div>
       </div>
@@ -276,9 +268,9 @@
 
   <footer class="site-footer" data-screen-label="footer">
     <div class="wrap">
-      <p class="footer-mini-manifesto">Feito devagar. Para durar.</p>
+      <p class="footer-mini-manifesto">Feito devagar. Pra durar.</p>
       <div class="footer-inner">
-        <p class="footer-line-1">Tatarugas · feito no Brasil, para relações reais</p>
+        <p class="footer-line-1">Tatarugas · feito devagar, no Brasil</p>
         <p class="footer-line-2">
           <a href="privacy.html">Política de privacidade</a>
           <span aria-hidden="true">·</span>
@@ -291,6 +283,7 @@
     </div>
   </footer>
 
+  <script src="tuca.js"></script>
   <script src="site.js"></script>
 </body>
 </html>

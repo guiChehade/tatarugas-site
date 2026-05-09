@@ -111,7 +111,7 @@ em { font-style: italic; }
   color: var(--text);
   display: inline-flex; align-items: center; gap: 12px;
 }
-.brand .brand-glyph { width: clamp(34px, 4vw, 44px); height: clamp(34px, 4vw, 44px); color: var(--primary); }
+.brand .brand-glyph { width: clamp(50px, 6.2vw, 64px); height: clamp(50px, 6.2vw, 64px); color: var(--primary); }
 .brand em { color: var(--primary); }
 
 /* Theme toggle */
@@ -155,14 +155,15 @@ em { font-style: italic; }
   display: none;
 }
 
-/* Concentric rings — decoração sutil de fundo do hero */
-.hero-rings {
-  position: absolute; right: -8%; top: 50%; transform: translateY(-50%);
-  width: clamp(380px, 60vw, 560px); aspect-ratio: 1; pointer-events: none;
-  color: var(--primary); opacity: .07;
+/* Logo do hero — dois círculos sobrepostos com halo, atrás da copy */
+.hero-logo-bg {
+  position: absolute; right: -6%; top: 50%; transform: translateY(-50%);
+  width: clamp(380px, 62vw, 620px); height: auto; pointer-events: none;
+  opacity: .28; z-index: 0;
 }
+.hero .wrap { position: relative; z-index: 1; }
 @media (max-width: 920px) {
-  .hero-rings { right: -30%; opacity: .05; }
+  .hero-logo-bg { right: -28%; top: auto; bottom: -12%; transform: none; opacity: .18; }
 }
 
 /* ── Buttons ─────────────────────────────────────────── */

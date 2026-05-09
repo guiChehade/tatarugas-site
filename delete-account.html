@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="ember">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Tatarugas — Excluir conta</title>
+  <meta name="description" content="Como excluir sua conta Tatarugas: caminho dentro do app ou pedido por email."/>
+  <meta name="theme-color" content="#1A120F"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="site.css"/>
+
+  <!-- Bootstrap síncrono de tema, antes do paint, sem FOUC -->
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('tatarugas.theme');
+        if (t === 'manha' || t === 'ember') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch(_){}
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="Tatarugas · ir para a home">
+        <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+        </svg>
+        <span>Tatar<em>ugas</em></span>
+      </a>
+      <button class="theme-toggle" aria-label="Alternar tema entre ember e manhã">
+        <span class="opt" data-theme="ember"  aria-pressed="true">ember</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="opt" data-theme="manha"  aria-pressed="false">manhã</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section contato-section">
+      <div class="wrap-tight">
+        <p class="kicker primary">Excluir conta</p>
+        <h1 class="hero-title" style="font-size:clamp(40px,6vw,64px)">
+          Apagar <em>tudo.</em>
+        </h1>
+        <p class="hero-sub" style="margin-top:18px">
+          A exclusão é definitiva. Tira a conta, tira o que você guardou, e encerra o vínculo com a sua pessoa. Você pode criar uma conta nova depois — o histórico não volta.
+        </p>
+
+        <!-- Caminho 1: dentro do app -->
+        <div style="margin-top:48px">
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);margin-bottom:14px">
+            Pelo aplicativo
+          </h2>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65;margin-bottom:14px">
+            O caminho mais rápido fica dentro do app: <strong>Perfil → Conta → Excluir conta</strong>. A confirmação acontece em duas etapas pra evitar tap acidental. Assim que você confirma, a exclusão começa imediatamente.
+          </p>
+        </div>
+
+        <!-- Caminho 2: pedido por email (web) -->
+        <div style="margin-top:40px">
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);margin-bottom:14px">
+            Por email (sem o app)
+          </h2>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65;margin-bottom:14px">
+            Se você não tem mais acesso ao app — perdeu o aparelho, deletou a conta no provedor de login, está sem internet pra atualizar — manda um email pra <strong>contato@tatarugas.com.br</strong> com o assunto <em>"Excluir conta"</em> e o email que você usa pra entrar. A gente confirma a sua identidade pelo próprio email cadastrado e processa a exclusão em até <strong>30 dias</strong> (geralmente em 48h úteis).
+          </p>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65;margin-bottom:14px">
+            Ou usa o formulário abaixo se preferir. Mesmo prazo.
+          </p>
+
+          <!--
+            Formulário usa FormSubmit (https://formsubmit.co/) — mesmo serviço
+            do contato. Primeira submissão exige confirmação por email; depois
+            disso, todo POST chega direto. _subject identifica o pedido.
+          -->
+          <form class="contato-form" action="https://formsubmit.co/contato@tatarugas.com.br" method="POST" novalidate>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+            <input type="hidden" name="_captcha" value="false"/>
+            <input type="hidden" name="_subject" value="Excluir conta — pedido pelo site"/>
+            <input type="hidden" name="_next" value="https://tatarugas.com.br/delete-account.html?enviado=1"/>
+
+            <div class="contato-field">
+              <label for="email">Email cadastrado no app</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com"/>
+            </div>
+
+            <div class="contato-field">
+              <label for="motivo">Motivo (opcional)</label>
+              <textarea id="motivo" name="motivo" placeholder="Não precisa explicar. Mas se quiser, conta — ajuda a melhorar o app."></textarea>
+            </div>
+
+            <div class="contato-actions">
+              <button type="submit" class="btn btn-primary">
+                Enviar pedido de exclusão
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                  <path d="M1 5h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <p class="contato-fineprint">Resposta em até <strong>48h úteis</strong>. Processamento total em até <strong>30 dias</strong>.</p>
+            </div>
+
+            <p class="waitlist-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- O que e apagado / o que pode ser mantido -->
+        <div style="margin-top:48px">
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);margin-bottom:14px">
+            O que é apagado
+          </h2>
+          <ul style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.7;padding-left:20px">
+            <li>Sua identidade na plataforma (nome, foto, data de nascimento, preferências).</li>
+            <li>Suas respostas pessoais (Pergunta do dia, Tuca Cutuca, diário, humor).</li>
+            <li>Os carinhos que você enviou ou recebeu, e o histórico de conversa do casal.</li>
+            <li>O perfil ativo da Tuca sobre você (memória de curto prazo).</li>
+            <li>O vínculo com a sua pessoa: se você é parte de um casal, o relacionamento é encerrado.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:32px">
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);margin-bottom:14px">
+            O que pode ser mantido
+          </h2>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65;margin-bottom:14px">
+            A gente segue obrigações legais e operacionais mínimas: registros de pagamento (quando houver assinatura paga), logs de fraude/abuso anonimizados, e backups encriptados que rotacionam em até 90 dias. Esses pedaços são despersonalizados — não voltam a ser ligados ao seu nome ou email.
+          </p>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65;margin-bottom:14px">
+            Se você reportou alguma conversa ou foi reportado, o registro do report pode ser mantido pelo tempo necessário pra investigação — sem expor sua identidade pública.
+          </p>
+        </div>
+
+        <!-- Prazo -->
+        <div style="margin-top:32px">
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3.4vw,32px);margin-bottom:14px">
+            Prazo de resposta
+          </h2>
+          <p style="font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.65">
+            <strong>48h úteis</strong> pra confirmar o pedido por email. <strong>30 dias</strong> pra completar a exclusão definitiva (a maior parte rola em horas; o teto de 30 dias cobre backups e jobs de limpeza assíncronos).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-mini-manifesto">Feito devagar. Pra durar.</p>
+      <div class="footer-inner">
+        <p class="footer-line-1">Tatarugas · feito devagar, no Brasil</p>
+        <p class="footer-line-2">
+          <a href="privacy.html">Política de privacidade</a>
+          <span aria-hidden="true">·</span>
+          <a href="terms.html">Termos de uso</a>
+          <span aria-hidden="true">·</span>
+          <a href="contato.html">Contato</a>
+        </p>
+        <p class="footer-line-3">© 2026 — Tatarugas. Todos os dias importam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+
+  <!-- Mostrar mensagem de sucesso quando voltar do FormSubmit (via ?enviado=1) -->
+  <script>
+    (function(){
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('enviado') === '1') {
+        var s = document.querySelector('.waitlist-success');
+        if (s) {
+          s.textContent = 'Pedido recebido. Resposta em até 48h úteis.';
+          s.classList.add('shown');
+          s.style.display = 'block';
+          s.style.padding = '14px 0';
+          s.style.color = 'var(--tuca, #5FA4A0)';
+          s.style.fontFamily = '"Fraunces", serif';
+          s.style.fontStyle = 'italic';
+          s.style.fontSize = '17px';
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>

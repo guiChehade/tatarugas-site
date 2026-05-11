@@ -2,15 +2,24 @@
 
 Site estático, sem build step. Pronto pra subir em qualquer host (Vercel, Netlify, GitHub Pages, S3, Cloudflare Pages, etc.).
 
+## Papel no projeto
+
+Este diretório é a fonte canônica do site público em `tatarugas.com.br`.
+
+Ele fica dentro do monorepo por conveniência operacional, mas mantém
+`git` próprio de forma intencional porque o site é público no GitHub e o
+app mobile não.
+
 ## Estrutura
 
 ```
 index.html       Home
 contato.html     Form de contato (FormSubmit)
+delete-account.html Fluxo publico de exclusao com confirmacao por email
 privacy.html     Política de Privacidade
 terms.html       Termos de uso
 site.css         Tokens + componentes
-site.js          Theme toggle, waitlist, scroll-reveal
+site.js          Theme toggle, mensagens de sucesso por querystring e scroll-reveal
 tuca.js          Organismo de partículas da Tuca (canvas + rAF)
 assets/
   logo.svg       Logo (currentColor — herda do tema)
@@ -42,8 +51,9 @@ assets/
 
 ## Configurações que podem precisar de ajuste
 
-1. **Domínio do FormSubmit** em `contato.html` — confirme que `_next` aponta pro seu domínio em produção.
-2. **Backend da waitlist** em `site.js` — hoje é placeholder client-side. Para produção, plugue um POST para o seu backend (Supabase, Resend, etc.).
+1. **Domínio do FormSubmit** em `contato.html` e `index.html` — confirme que `_next` aponta pro domínio certo em produção.
+2. **Delete account endpoint** em `delete-account.html` — confirme se a URL da edge function continua apontando pro projeto Supabase certo.
 3. **Open Graph image** — `assets/og-image.svg` é um SVG; alguns crawlers preferem PNG/JPG 1200×630. Considere exportar uma versão raster.
+4. **Deploy** — como o diretório tem `git` próprio, publique por ele; o repo do app não deve ser a fonte de deploy do site.
 
 — feito devagar, no Brasil.

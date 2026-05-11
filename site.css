@@ -185,6 +185,7 @@ em { font-style: italic; }
   border-bottom: 1px solid var(--border); padding-bottom: 2px;
 }
 .link-soft:hover { color: var(--primary); border-color: var(--primary); }
+.link-soft.link-critical { color: var(--primary); border-color: var(--border-focused); }
 
 /* ── Manifesto ───────────────────────────────────────── */
 .manifesto-text {
@@ -257,15 +258,15 @@ em { font-style: italic; }
   position: absolute; top: 22px; right: 22px;
   width: 28px; height: 28px; opacity: .55; color: var(--primary);
 }
+.cabe-card .kicker,
 .cabe-card-tuca .kicker { color: var(--primary); }
-.cabe-card-tuca .glyph-sm   { color: var(--primary); }
+.cabe-card-tuca .glyph-sm { color: var(--primary); }
 .cabe-card h4 {
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(19px, 2.2vw, 22px); font-weight: 400; line-height: 1.18;
-  color: var(--text); margin: 6px 0 10px; max-width: 320px; padding-right: 36px;
+  color: var(--primary); margin: 6px 0 10px; max-width: 320px; padding-right: 36px;
 }
-.cabe-card h4 em { font-style: italic; }
-.cabe-card-tuca h4 em { color: var(--primary); }
+.cabe-card h4 em { font-style: italic; color: var(--primary); }
 .cabe-card p { font-size: 14.5px; color: var(--text-secondary); max-width: 340px; }
 
 /* ── Privacidade ─────────────────────────────────────── */
@@ -333,14 +334,18 @@ em { font-style: italic; }
 .waitlist-fineprint { margin-top: 14px; font-size: 12.5px; color: var(--text-disabled); }
 .waitlist-success { color: var(--tuca); margin-top: 18px; font-size: 14.5px; display: none; }
 .waitlist-success.shown { display: block; }
+.waitlist-success[data-tone="error"] { color: var(--primary); }
+.waitlist-success[data-tone="success"] { color: var(--tuca); }
 
 /* ── Footer ──────────────────────────────────────────── */
 .site-footer { border-top: 1px solid var(--border); padding: clamp(40px, 6vw, 64px) 0; }
 .footer-inner { display: flex; flex-direction: column; gap: 14px; }
 .footer-line-1 { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 18px; color: var(--text); }
-.footer-line-2 { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-secondary); display: flex; gap: 14px; flex-wrap: wrap; }
+.footer-line-2 { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .footer-line-2 a { color: var(--text-secondary); }
 .footer-line-2 a:hover { color: var(--primary); }
+.footer-line-2 a:last-of-type { color: var(--primary); }
+.footer-line-2 a.link-critical { color: var(--primary); font-weight: 600; }
 .footer-line-3 { font-size: 12.5px; color: var(--text-disabled); margin-top: 10px; }
 .footer-mini-manifesto {
   font-family: "Fraunces", Georgia, serif; font-style: italic;
@@ -376,6 +381,52 @@ em { font-style: italic; }
   font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
   color: var(--text-secondary); margin-bottom: 28px;
 }
+.doc-hero-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 300;
+  line-height: 1.03;
+  letter-spacing: -0.028em;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.doc-hero-title em { color: var(--primary); }
+.doc-hero-sub {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(17px, 2vw, 22px);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.48;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin-bottom: 0;
+}
+.doc-callout {
+  margin-top: 32px;
+  padding: clamp(24px, 3.6vw, 34px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(160deg, var(--card-grad-from) 0%, var(--card-grad-to) 100%);
+  box-shadow: inset 0 1px 0 var(--inner-glow);
+}
+.doc-callout--critical {
+  border-color: var(--border-focused);
+}
+.doc-section-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(23px, 3vw, 30px);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 14px;
+}
+.delete-account-page .doc-section-title { color: var(--primary); }
+.doc-callout p:last-child,
+.doc-callout ul:last-child { margin-bottom: 0; }
+.doc-callout ul { margin-top: 0; }
+.delete-account-page .contato-form { margin-top: 24px; }
 
 /* ── Página de contato ───────────────────────────────── */
 .contato-section { padding: clamp(48px, 7vw, 80px) 0 clamp(64px, 9vw, 96px); }

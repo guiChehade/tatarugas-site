@@ -264,7 +264,7 @@ em { font-style: italic; }
 .cabe-card h4 {
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(19px, 2.2vw, 22px); font-weight: 400; line-height: 1.18;
-  color: var(--primary); margin: 6px 0 10px; max-width: 320px; padding-right: 36px;
+  color: var(--text); margin: 6px 0 10px; max-width: 320px; padding-right: 36px;
 }
 .cabe-card h4 em { font-style: italic; color: var(--primary); }
 .cabe-card p { font-size: 14.5px; color: var(--text-secondary); max-width: 340px; }

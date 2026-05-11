@@ -23,7 +23,8 @@ site.js          Theme toggle, mensagens de sucesso por querystring e scroll-rev
 tuca.js          Organismo de partículas da Tuca (canvas + rAF)
 assets/
   logo.svg       Logo (currentColor — herda do tema)
-  favicon.svg    Favicon
+  favicon.svg    Favicon anterior
+  favicon-backup.svg Backup explÃ­cito do favicon anterior
   og-image.svg   Imagem do Open Graph
 ```
 

@@ -194,8 +194,8 @@ em { font-style: italic; }
   color: var(--text); max-width: 640px; font-weight: 400;
 }
 .manifesto-text p + p { margin-top: 1.2em; }
-/* Manifesto: <em>Tuca</em> e seu "O que é o Tatarugas" — mantido em teal */
-.manifesto-text em { color: var(--tuca); font-style: italic; }
+/* Manifesto: segue o carrossel fixo, com itálicos em terracota. */
+.manifesto-text em { color: var(--primary); font-style: italic; }
 
 /* ── Section heading ─────────────────────────────────── */
 .section-head { margin-bottom: clamp(36px, 6vw, 56px); max-width: 660px; }

@@ -121,6 +121,8 @@ em { font-style: italic; }
   font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--text-secondary);
   background: transparent; border: none; padding: 6px 0; cursor: pointer;
+  /* Alvo de toque >= 44px (WCAG 2.5.5 / mobile) — antes 26px de altura. */
+  min-height: 44px;
 }
 .theme-toggle .opt { transition: color .2s ease; padding: 0 2px; }
 .theme-toggle .sep { color: var(--border); }
@@ -345,7 +347,11 @@ em { font-style: italic; }
 .footer-inner { display: flex; flex-direction: column; gap: 14px; }
 .footer-line-1 { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 18px; color: var(--text); }
 .footer-line-2 { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-.footer-line-2 a { color: var(--text-secondary); }
+.footer-line-2 a {
+  color: var(--text-secondary);
+  /* Alvo de toque >= 44px (WCAG 2.5.5 / mobile) — antes 19px de altura. */
+  display: inline-flex; align-items: center; min-height: 44px;
+}
 .footer-line-2 a:hover { color: var(--primary); }
 .footer-line-2 a:last-of-type { color: var(--primary); }
 .footer-line-2 a.link-critical { color: var(--primary); font-weight: 600; }

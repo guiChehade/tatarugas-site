@@ -287,7 +287,9 @@ em { font-style: italic; }
 }
 .privacy-block h2 {
   font-family: "Fraunces", Georgia, serif; font-weight: 300;
-  font-size: clamp(24px, 3.6vw, 40px); line-height: 1.08; letter-spacing: -0.02em;
+  /* Escala unificada dos títulos de seção de card (privacy/makers/
+     waitlist) — antes 40/38/42px, drift sem intenção. */
+  font-size: clamp(26px, 4vw, 42px); line-height: 1.08; letter-spacing: -0.02em;
   color: var(--text);
 }
 .privacy-block h2 em { font-style: italic; color: var(--primary); }
@@ -300,7 +302,8 @@ em { font-style: italic; }
 .makers .kicker { display: block; }
 .makers h2 {
   font-family: "Fraunces", Georgia, serif; font-weight: 300; font-style: italic;
-  font-size: clamp(24px, 3.4vw, 38px); line-height: 1.15; color: var(--text);
+  /* Escala unificada dos títulos de seção de card. */
+  font-size: clamp(26px, 4vw, 42px); line-height: 1.15; color: var(--text);
 }
 .makers p { font-size: clamp(15px, 1.8vw, 17px); color: var(--text-secondary); margin-top: 18px; }
 

@@ -50,7 +50,7 @@
       <a href="index.html" class="doc-back">‹ voltar pra home</a>
       <p class="kicker primary">Documento legal</p>
       <h1>Política de <em class="editorial-it">Privacidade</em></h1>
-      <p class="last-updated">Última atualização · 11 de maio de 2026</p>
+      <p class="last-updated">Última atualização · 17 de maio de 2026</p>
 
       <p>Esta Política descreve como o <strong>Tatarugas</strong> coleta, usa, armazena e protege os dados pessoais de quem usa o aplicativo e este site. Foi escrita pra ser <em>legível</em> — sem floreio jurídico desnecessário, mas com o rigor que a LGPD pede. Se algo aqui não estiver claro, escreva pra <a href="mailto:contato@tatarugas.com.br">contato@tatarugas.com.br</a>.</p>
 
@@ -60,13 +60,16 @@
       <h2 id="dados">2 · Que dados coletamos</h2>
       <h3>Dados que você nos dá diretamente</h3>
       <ul>
-        <li><strong>Conta:</strong> email, nome ou apelido, e — se você quiser — nome do par.</li>
-        <li><strong>Conteúdo do casal:</strong> tudo o que vocês escrevem, marcam, gravam ou guardam dentro do app.</li>
+        <li><strong>Conta:</strong> email, nome ou apelido, foto de perfil opcional e — se você quiser — nome do par.</li>
+        <li><strong>Perfil opcional:</strong> data, horário e local de nascimento e signo, quando você preenche para recursos lúdicos do app.</li>
+        <li><strong>Conteúdo do casal:</strong> mensagens, respostas da Pergunta do Dia, respostas da Tuca Cutuca, check-ins de humor, carinhos, diário, Ponte, calendário, cápsulas, memórias, fotos e marcos que vocês criam dentro do app.</li>
         <li><strong>Comunicação direta:</strong> emails que você nos manda, respostas em formulários, feedbacks.</li>
       </ul>
       <h3>Dados que coletamos automaticamente</h3>
       <ul>
         <li><strong>Diagnóstico técnico:</strong> versão do app, tipo de dispositivo, sistema operacional, idioma e fuso. Usado pra estabilidade — nunca pra rastrear você.</li>
+        <li><strong>Crashes e performance:</strong> quando o app trava ou apresenta erro técnico, recebemos logs de diagnóstico pelo Sentry. Esses logs não devem incluir o conteúdo que você escreve no app.</li>
+        <li><strong>Notificações:</strong> se você ativa push, guardamos token de push, plataforma, versão do app e fuso para entregar notificações via Expo, Apple APNs e Google FCM.</li>
         <li><strong>Telemetria anônima opcional:</strong> quando essa opção está ligada no app, recebemos métricas técnicas e eventos básicos de uso. Isso não inclui o conteúdo do que você escreve.</li>
         <li><strong>Email de interesse e contato:</strong> se você deixa seu email neste site ou nos escreve, guardamos o endereço e a data do envio.</li>
         <li><strong>Pedido de exclusão via site:</strong> quando você pede exclusão fora do app, guardamos o email informado, o horário do pedido, metadados técnicos mínimos antiabuso e o status do link de confirmação enviado para esse mesmo endereço.</li>
@@ -83,7 +86,7 @@
       <p>Cada coleta tem uma finalidade específica e uma base legal sob a LGPD:</p>
       <ul>
         <li><strong>Executar o contrato</strong> de uso do app (art. 7º, V).</li>
-        <li><strong>Consentimento</strong> (art. 7º, I) — para a Tuca aprender com vocês. Você pode revogar a qualquer momento, em <em>Ajustes › Privacidade</em>.</li>
+        <li><strong>Consentimento</strong> (art. 7º, I) — para a Tuca aprender com vocês, para telemetria opcional e para notificações quando você ativa essa permissão. Você pode revogar a qualquer momento, em <em>Ajustes › Privacidade</em> ou nas permissões do sistema.</li>
         <li><strong>Legítimo interesse</strong> (art. 7º, IX) — para diagnóstico técnico anonimizado, segurança, prevenção de fraude.</li>
         <li><strong>Cumprimento de obrigação legal</strong> (art. 7º, II).</li>
       </ul>
@@ -117,10 +120,22 @@
       <ul>
         <li><strong>Confirmação e acesso</strong>, <strong>correção</strong>, <strong>exclusão</strong>, <strong>portabilidade</strong>, <strong>revogação de consentimento</strong>, <strong>oposição</strong>.</li>
       </ul>
-      <p>Para exercer qualquer um, escreva pra <a href="mailto:contato@tatarugas.com.br">contato@tatarugas.com.br</a>. No caso da exclusão via site, a gente pode pedir confirmação pelo próprio email antes de processar. Respondemos em até 15 dias.</p>
+      <p>Você pode pedir exclusão de conta pelo app ou pela página <a href="delete-account.html">Excluir conta</a>. Para outros direitos, escreva pra <a href="mailto:contato@tatarugas.com.br">contato@tatarugas.com.br</a>. No caso da exclusão via site, a gente pode pedir confirmação pelo próprio email antes de processar. Respondemos em até 15 dias.</p>
 
       <h2>8 · Compartilhamento com terceiros</h2>
-      <p>Não vendemos dados. Não temos rede de anunciantes. Operadores técnicos: <strong>Supabase</strong> (banco e auth), provedores de IA usados pela Tuca quando você aciona essas superfícies, provedor de email transacional e analytics técnico quando a telemetria anônima está ligada.</p>
+      <p>Não vendemos dados. Não temos rede de anunciantes. Não usamos identificadores publicitários nem cruzamos seus dados com dados de outros apps ou sites para tracking.</p>
+      <p>Os operadores técnicos que podem processar dados em nosso nome são:</p>
+      <ul>
+        <li><strong>Supabase:</strong> autenticação, banco de dados, storage, realtime e funções serverless.</li>
+        <li><strong>Anthropic e OpenAI:</strong> modelos de IA usados em recursos da Tuca, como Cutuca, Ponte, Minha Jornada e perfil inteligente. Enviamos apenas o texto necessário para gerar a resposta ou síntese solicitada.</li>
+        <li><strong>PostHog:</strong> telemetria de produto quando você mantém essa opção ligada. Não enviamos texto livre nem conteúdo íntimo.</li>
+        <li><strong>Sentry:</strong> crashes, performance e diagnóstico técnico do app, sem conteúdo escrito pelo casal.</li>
+        <li><strong>Expo, Apple APNs e Google FCM:</strong> entrega de notificações push, quando ativadas.</li>
+        <li><strong>Resend:</strong> emails transacionais, suporte, moderação e confirmação de exclusão.</li>
+        <li><strong>FormSubmit:</strong> encaminhamento de formulários deste site para nosso email.</li>
+        <li><strong>Google ou Apple:</strong> provedor de login escolhido por você.</li>
+      </ul>
+      <p>Esses terceiros atuam como provedores de infraestrutura ou processamento. Eles não têm permissão para vender seus dados ou usar o conteúdo do casal para publicidade.</p>
 
       <h2>9 · Crianças e adolescentes</h2>
       <p>O Tatarugas é exclusivo para pessoas maiores de 18 anos.</p>

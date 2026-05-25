@@ -14,6 +14,7 @@ app mobile não.
 
 ```
 index.html       Home
+links/index.html Links oficiais para bio e download
 contato.html     Form de contato (FormSubmit)
 delete-account.html Fluxo publico de exclusao com confirmacao por email
 privacy.html     Política de Privacidade
@@ -52,7 +53,7 @@ assets/
 
 ## Configurações que podem precisar de ajuste
 
-1. **Domínio do FormSubmit** em `contato.html` e `index.html` — confirme que `_next` aponta pro domínio certo em produção.
+1. **Domínio do FormSubmit** em `contato.html` — confirme que `_next` aponta pro domínio certo em produção.
 2. **Delete account endpoint** em `delete-account.html` — confirme se a URL da edge function continua apontando pro projeto Supabase certo.
 3. **Open Graph image** — `assets/og-image.svg` é um SVG; alguns crawlers preferem PNG/JPG 1200×630. Considere exportar uma versão raster.
 4. **Deploy** — como o diretório tem `git` próprio, publique por ele; o repo do app não deve ser a fonte de deploy do site.

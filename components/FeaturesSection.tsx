@@ -162,12 +162,12 @@ export function FeaturesSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           {[
-            { src: "/media/lockscreen.png", label: "Notificação" },
-            { src: "/media/home.png", label: "Início" },
-            { src: "/media/intimo.png", label: "Íntimo" },
-            { src: "/media/conversa.png", label: "Conversa" },
-            { src: "/media/humor.png", label: "Humor" },
-          ].map(({ src, label }, i) => (
+            { src: "/media/lockscreen.png", fallback: "/media/home-screen.png", label: "Notificação" },
+            { src: "/media/home.png", fallback: "/media/home-screen.png", label: "Início" },
+            { src: "/media/intimo.png", fallback: "/media/nos-screen.png", label: "Íntimo" },
+            { src: "/media/conversa.png", fallback: "/media/nos-screen.png", label: "Conversa" },
+            { src: "/media/humor.png", fallback: "/media/carinho-screen.png", label: "Humor" },
+          ].map(({ src, fallback, label }, i) => (
             <motion.div
               key={label}
               className="flex-shrink-0 relative"
@@ -178,13 +178,12 @@ export function FeaturesSection() {
               whileHover={{ y: -6, scale: 1.02 }}
             >
               <div className="relative w-[150px] md:w-[185px] rounded-[24px] overflow-hidden border border-bg-border shadow-2xl shadow-black/60">
-                <Image
+                <img
                   src={src}
                   alt={`Tatarugas — tela ${label}`}
                   width={185}
-                  height={400}
                   className="w-full h-auto"
-                  unoptimized
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = fallback; }}
                 />
               </div>
               <p className="text-center text-[11px] text-text-dim mt-2 font-mono tracking-wide">

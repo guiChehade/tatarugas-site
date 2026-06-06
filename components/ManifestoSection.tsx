@@ -28,7 +28,7 @@ export function ManifestoSection() {
           {paragraphs.map((para, i) => (
             <motion.p
               key={i}
-              className="font-display text-[clamp(1.15rem,2.5vw,1.4rem)] leading-[1.6] text-text-secondary"
+              className="font-display text-[clamp(1.15rem,2.5vw,1.4rem)] leading-[1.6] text-text-primary"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}

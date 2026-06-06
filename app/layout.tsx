@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Tatarugas — Um lugar só de vocês dois",
   description:
     "Um espaço privado para casais conversarem melhor, guardarem memórias e cuidarem da relação no dia a dia.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+    other: { rel: "mask-icon", url: "/favicon.svg", color: "#D86C4A" },
+  },
   openGraph: {
     title: "Tatarugas — Um lugar só de vocês dois",
     description:

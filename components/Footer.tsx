@@ -28,13 +28,13 @@ export function Footer() {
 
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-text-dim">
             <a
-              href="https://tatarugas.com.br/privacy.html"
+              href="https://tatarugas.com.br/privacy/"
               className="hover:text-text-secondary transition-colors duration-200 cursor-pointer"
             >
               Privacidade
             </a>
             <a
-              href="https://tatarugas.com.br/terms.html"
+              href="https://tatarugas.com.br/terms/"
               className="hover:text-text-secondary transition-colors duration-200 cursor-pointer"
             >
               Termos de uso

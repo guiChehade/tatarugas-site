@@ -61,13 +61,13 @@ export function PrivacySection() {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://tatarugas.com.br/privacy.html"
+                  href="https://tatarugas.com.br/privacy/"
                   className="text-sm text-text-dim hover:text-text-secondary border border-bg-border hover:border-bg-border/60 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
                 >
                   Política de privacidade
                 </a>
                 <a
-                  href="https://tatarugas.com.br/terms.html"
+                  href="https://tatarugas.com.br/terms/"
                   className="text-sm text-text-dim hover:text-text-secondary border border-bg-border hover:border-bg-border/60 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
                 >
                   Termos de uso

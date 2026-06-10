@@ -12,10 +12,9 @@ function normalizeInviteCode(input: string): string {
 }
 
 const APP_STORE_URL = "https://apps.apple.com/app/tatarugas/id6764645218";
-// TODO: ativar quando o app sair do teste fechado no Google Play.
-// URL canônica já reservada:
-// https://play.google.com/store/apps/details?id=com.guichehade.tatarugas
-const PLAY_STORE_URL: string | null = null;
+// App aprovado no Google Play em 2026-06 — URL canônica ativa.
+const PLAY_STORE_URL: string | null =
+  "https://play.google.com/store/apps/details?id=com.guichehade.tatarugas";
 
 const container = {
   hidden: {},

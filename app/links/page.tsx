@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { AnimatedLogo } from "@/components/AnimatedLogo";
 
@@ -13,7 +14,17 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
-const links = [
+type LinkItem = {
+  href?: string;
+  primary?: boolean;
+  disabled?: boolean;
+  badge?: string;
+  title: string;
+  sub: string;
+  icon: ReactNode;
+};
+
+const links: LinkItem[] = [
   {
     href: "https://apps.apple.com/app/tatarugas/id6764645218",
     primary: true,
@@ -26,10 +37,10 @@ const links = [
     ),
   },
   {
-    disabled: true,
-    title: "Google Play",
-    sub: "Android em breve",
-    badge: "Em breve",
+    href: "https://play.google.com/store/apps/details?id=com.guichehade.tatarugas",
+    primary: true,
+    title: "Baixar no Google Play",
+    sub: "Disponível para Android",
     icon: (
       <svg width="18" height="20" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true">
         <path d="M3.18 1.27C2.45 1.7 2 2.51 2 3.46v19.08c0 .95.45 1.76 1.18 2.19l.1.06 10.69-10.69v-.25L3.28 3.16l-.1.11zM17.46 17.37l-3.56-3.56v-.25l3.56-3.57.08.05 4.22 2.4c1.21.69 1.21 1.8 0 2.49l-4.22 2.4-.08.04zM14 13.91L3.18 24.73c.4.26.88.28 1.34.04l12.3-6.99L14 13.91zM4.52 1.23l12.3 6.99-2.82 2.82L4.52 1.23z" />

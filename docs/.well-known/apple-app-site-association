@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID_TODO.com.guichehade.tatarugas"],
+        "components": [
+          {
+            "/": "/convite",
+            "comment": "Convite de pareamento (TODO: trocar TEAMID_TODO em appIDs pelo Team ID real — Apple Developer > Membership > Team ID)"
+          },
+          {
+            "/": "/convite/*",
+            "comment": "Convite com trailing slash / sub-rotas"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -45,7 +45,7 @@ export function DownloadSection() {
         >
           Baixe o Tatarugas
           <br />
-          <em className="text-ember">na App Store.</em>
+          <em className="text-ember">no iPhone ou Android.</em>
         </motion.h2>
 
         <motion.p
@@ -55,8 +55,7 @@ export function DownloadSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.65, delay: 0.2 }}
         >
-          No Android, o app segue em testes no Google Play. Por enquanto, a
-          forma pública de baixar é pelo iPhone.
+          Disponível para iPhone na App Store e para Android no Google Play.
         </motion.p>
 
         <motion.div
@@ -91,15 +90,30 @@ export function DownloadSection() {
             </svg>
           </motion.a>
 
-          <span
-            className="flex items-center gap-2 px-6 py-4 rounded-full border border-bg-border text-text-dim text-base cursor-not-allowed"
-            aria-disabled="true"
+          <motion.a
+            href="https://play.google.com/store/apps/details?id=com.guichehade.tatarugas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 px-8 py-4 bg-ember rounded-full text-white font-semibold text-base cursor-pointer shadow-lg shadow-ember/20"
+            whileHover={{ scale: 1.03, backgroundColor: "#c45f3e" }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
-            <svg width="16" height="18" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
-              <path d="M17.523 15.341c-.007-.007-.014-.007-.014-.007-1.4-.7-2.94-1.057-4.509-1.057-1.568 0-3.107.356-4.508 1.057-.007 0-.007 0-.014.007L3.5 17.5l.992 1.718L8 17.432v8.068h2v-4h4v4h2v-8.068l3.508 1.786L20.5 17.5l-4.977-2.159zM12 1C9.239 1 7 3.239 7 6s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5z"/>
+            <svg width="16" height="18" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true">
+              <path d="M3.18 1.27C2.45 1.7 2 2.51 2 3.46v19.08c0 .95.45 1.76 1.18 2.19l.1.06 10.69-10.69v-.25L3.28 3.16l-.1.11zM17.46 17.37l-3.56-3.56v-.25l3.56-3.57.08.05 4.22 2.4c1.21.69 1.21 1.8 0 2.49l-4.22 2.4-.08.04zM14 13.91L3.18 24.73c.4.26.88.28 1.34.04l12.3-6.99L14 13.91zM4.52 1.23l12.3 6.99-2.82 2.82L4.52 1.23z"/>
             </svg>
-            Google Play em breve
-          </span>
+            Baixar no Google Play
+            <svg
+              width="12"
+              height="9"
+              viewBox="0 0 12 9"
+              fill="none"
+              className="transition-transform group-hover:translate-x-0.5"
+              aria-hidden="true"
+            >
+              <path d="M1 4.5h10m-3.5-3.5 3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </motion.a>
         </motion.div>
       </div>
     </section>

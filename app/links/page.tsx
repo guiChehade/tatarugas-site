@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { AnimatedLogo } from "@/components/AnimatedLogo";
@@ -13,6 +14,40 @@ const fadeUp = {
   hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
+
+
+const APP_STORE_BASE = "https://apps.apple.com/app/tatarugas/id6764645218";
+const PLAY_STORE_BASE =
+  "https://play.google.com/store/apps/details?id=com.guichehade.tatarugas";
+// Token de campanha do App Analytics (App Store Connect > App Analytics >
+// Sources > Campaigns > Generate Campaign Link fornece o `pt`). Enquanto
+// vazio, o link da App Store sai sem atribuicao de campanha.
+const APPLE_PROVIDER_TOKEN = "";
+
+// Atribuicao: repassa os utm_* da propria URL da pagina para as lojas.
+// Google Play: via `referrer` (aparece em Play Console > Aquisicao e pode
+// ser lido pelo app via Install Referrer API). App Store: via campaign
+// link `pt`/`ct` quando APPLE_PROVIDER_TOKEN estiver preenchido.
+function useAttributedStoreLinks() {
+  const [store, setStore] = useState({ apple: APP_STORE_BASE, play: PLAY_STORE_BASE });
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
+      .map((k) => [k, params.get(k)] as const)
+      .filter((pair) => pair[1]);
+    const referrer = utm.length
+      ? utm.map(([k, v]) => `${k}=${v}`).join("&")
+      : "utm_source=links_page";
+    const play = `${PLAY_STORE_BASE}&referrer=${encodeURIComponent(referrer)}`;
+    let apple = APP_STORE_BASE;
+    if (APPLE_PROVIDER_TOKEN) {
+      const ct = params.get("utm_content") || params.get("utm_campaign") || "links_page";
+      apple = `${APP_STORE_BASE}?pt=${APPLE_PROVIDER_TOKEN}&ct=${encodeURIComponent(ct)}&mt=8`;
+    }
+    setStore({ apple, play });
+  }, []);
+  return store;
+}
 
 type LinkItem = {
   href?: string;
@@ -83,6 +118,7 @@ const links: LinkItem[] = [
 ];
 
 export default function LinksPage() {
+  const store = useAttributedStoreLinks();
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden">
       {/* Aurora background */}
@@ -154,6 +190,9 @@ export default function LinksPage() {
           className="flex flex-col gap-3"
         >
           {links.map((link) => {
+            const href = link.primary
+              ? (link.title.includes("Google Play") ? store.play : store.apple)
+              : link.href;
             if (link.disabled) {
               return (
                 <motion.div
@@ -181,7 +220,7 @@ export default function LinksPage() {
                 <motion.a
                   key={link.title}
                   variants={fadeUp}
-                  href={link.href}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-ember text-white shadow-lg shadow-ember/20 cursor-pointer"

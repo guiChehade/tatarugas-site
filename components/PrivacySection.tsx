@@ -73,7 +73,7 @@ export function PrivacySection() {
                   Termos de uso
                 </a>
                 <a
-                  href="https://tatarugas.com.br/delete-account.html"
+                  href="https://tatarugas.com.br/delete-account/"
                   className="text-sm text-red-400/60 hover:text-red-400/80 border border-red-900/30 hover:border-red-900/50 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
                 >
                   Excluir conta

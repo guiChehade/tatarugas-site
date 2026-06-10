@@ -52,7 +52,7 @@ export function Footer() {
               Links
             </a>
             <a
-              href="https://tatarugas.com.br/delete-account.html"
+              href="https://tatarugas.com.br/delete-account/"
               className="text-red-400/40 hover:text-red-400/60 transition-colors duration-200 cursor-pointer"
             >
               Excluir conta
